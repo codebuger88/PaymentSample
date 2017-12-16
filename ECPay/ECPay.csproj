@@ -95,6 +95,10 @@
     <Content Include="Views\Pay\CreditCardReturn.cshtml" />
     <Content Include="Views\Pay\ATM.cshtml" />
     <Content Include="Views\Pay\ATMInfoReturn.cshtml" />
+    <Content Include="Views\Express\Map.cshtml" />
+    <Content Include="Views\Express\GetStore.cshtml" />
+    <Content Include="Views\Express\Create.cshtml" />
+    <Content Include="Views\Express\ShipmentNo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,10 +107,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ExpressController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Global.asax.cs">

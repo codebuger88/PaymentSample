@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetStore</title>
+    <script>
+        function closeWindow() {
+            window.opener.document.getElementById('selectStores').innerHTML = '重新選擇門市';
+            window.opener.document.getElementById('storeInformation').innerHTML = '@ViewBag.CVSStoreName：@ViewBag.CVSAddress';
+            window.opener.document.getElementById('store').value = '@ViewBag.CVSStoreID,@ViewBag.CVSStoreName,@ViewBag.CVSAddress';
+            //window.close();
+        }
+    </script>
+</head>
+<body onload="closeWindow();">
+    <button onclick="closeWindow();">返回購物車完成訂單</button>
+</body>
+</html>
