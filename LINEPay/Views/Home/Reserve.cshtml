@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Reserve</title>
+</head>
+<body>
+    <pre>
+        @ViewBag.ResponseJson
+    </pre>
+    @ViewBag.ErrorMessage
+    <a href="@ViewBag.PaymentUrl">@ViewBag.PaymentUrl</a>
+</body>
+<script>
+    document.querySelector('a').click()
+</script>
+</html>
