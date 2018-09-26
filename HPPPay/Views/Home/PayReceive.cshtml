@@ -1,0 +1,26 @@
+﻿@using System.Collections.Specialized
+@{
+    Layout = null;
+    var orderTransactions = (NameValueCollection)ViewBag.OrderTransactions;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=big5" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Pay</title>
+</head>
+<body>
+    <form action="" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+        @foreach (string key in orderTransactions)
+        {
+            <input type="hidden" name="@key" value="@orderTransactions[key]" />
+        }
+    </form>
+</body>
+<script>
+    document.forms[0].submit();
+</script>
+</html>
